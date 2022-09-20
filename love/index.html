@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love me?</title>
+    <style>
+        
+
+        h1 {
+            margin-top: 300px;
+            color: rgb(252, 113, 113);
+            font-size: 50px;
+            display: block;
+            position: absolute;
+        }
+
+        #div1 {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        #div2 {
+            margin-top: 150px;
+        }
+
+        button {
+            width: 60px;
+            height: auto;
+            text-decoration: center;
+            position: absolute;
+            display: flex;
+            cursor: pointer;
+            margin: 0 10px;
+            margin-top: 300px;
+            padding: 10px 20px;
+            background-color: rgb(236, 185, 224);
+            border: none;
+        }
+
+        .btn2 {
+            right: 50%;
+        }
+        #vid{
+            position: absolute;
+            right: 0;
+            top: 0;
+            min-width: 100%;
+            min-height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="all">
+        <div id="vid">
+            <video autoplay loop preload="auto" >
+                <source src="./Pink Heart particles   love symbol falling black screen   love effect black screen.mp4">
+            </video>
+        </div>
+        <div id="div1">
+            <h1>Do you want to be my girlfriend?</h1>
+
+            <div id="div2">
+                <button class="btn1">Yes</button>
+                <button class="btn2">No</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const a = document.querySelector('button.btn2')
+        a.addEventListener("mouseover", moveHover)
+
+        const b = document.querySelector('button.btn1')
+        b.addEventListener("click", info)
+
+        function moveHover() {
+            const i = Math.floor(Math.random() * 500) + 1;
+            const j = Math.floor(Math.random() * 500) + 1;
+
+            a.style.left = i + "px"
+            a.style.top = j + "px"
+        }
+
+        function info() {
+            alert('Text me your freetime! I will make a dating place')
+            window.open('https://www.facebook.com/profile.php?id=100006083375513')
+        }
+    </script>
+</body>
+
+</html>
